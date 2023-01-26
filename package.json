@@ -1,12 +1,12 @@
 {
   "name": "css-frameworks-ca",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "npm run unit-test && e2e-test",
     "unit-test": "jest",
-    "e2e-test":"cypress open",
+    "e2e-test": "cypress open",
     "build": "sass src/scss:dist/css",
     "start": "sass --watch src/scss:dist/css & live-server",
     "format": "prettier -w src/**/*.{js,scss}",

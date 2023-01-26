@@ -31,6 +31,25 @@ npm install
 npm run build
 ```
 
+## Usage Instructions for Environment Variables
+
+1. Open up index.html after setting up the project
+2. Register an account using "@stud.noroff.no" as email
+3. copy and past username, email and password in the .env file
+4. go to js/auth/login.js and add a console.log(profile.accesstoken) in the if statement
+```js
+if (response.ok) {
+    const profile = await response.json()
+    // Add it under the fetch statement.
+    console.log(profile.accessToken);
+}
+```
+5. go to index.html again, and open up the browser console
+6. login using your profile credentials
+7. check your browser console for generate accesstoken and copy it
+8. past the accesstoken in the .env under API_TOKEN
+ 
+
 
 
 

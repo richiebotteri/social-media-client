@@ -5,9 +5,6 @@ dotenv.config();
 
 export default defineConfig({
   e2e: {
-    setupNodeEvents() {
-      // implement node event listeners here
-    },
     env: {
       API_USERNAME: process.env.API_USERNAME,
       API_EMAIL: process.env.API_EMAIL,

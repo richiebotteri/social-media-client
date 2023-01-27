@@ -2,6 +2,7 @@
   "name": "css-frameworks-ca",
   "version": "0.0.8",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "npm run unit-test && e2e-test",

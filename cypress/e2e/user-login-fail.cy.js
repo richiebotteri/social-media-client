@@ -1,7 +1,7 @@
 describe("login form", () => {
   before(() => {
     // Opens up website and closes register form
-    cy.visit("/");
+    cy.visit(Cypress.env("LOCAL_HOST"));
     cy.wait(2000);
     cy.get('.modal-footer > [data-bs-dismiss="modal"]').eq(1).click();
 

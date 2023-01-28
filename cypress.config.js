@@ -5,7 +5,7 @@ dotenv.config();
 
 export default defineConfig({
   e2e: {
-    baseUrl: "http://localhost:5500",
+    baseUrl: process.env.LOCAL_HOST,
     env: {
       USER_NAME: process.env.USER_NAME,
       USER_EMAIL: process.env.USER_EMAIL,

@@ -27,5 +27,17 @@ describe("login feature", () => {
     cy.wait("@userAuth").then((userAuthResult) => {
       expect(userAuthResult.response.statusCode).to.equal(200);
     });
+
+    // Checks that localStorage has user Token Uploaded
+
+    cy.wait(2000);
+
+    cy.window().its("localStorage.getItem").should("exist", "token");
+    cy.window()
+      .its("localStorage")
+      .then((localStorage) => {
+        const token = localStorage.getItem("token");
+        expect(token).to.be.a("string").and.not.empty;
+      });
   });
 });

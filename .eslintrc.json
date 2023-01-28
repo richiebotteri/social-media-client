@@ -28,5 +28,8 @@
         "sourceType": "module"
     },
     "rules": {
-    }
+    },
+    "globals": {
+        "global": true
+        }
 }

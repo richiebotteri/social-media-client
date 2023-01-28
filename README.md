@@ -36,18 +36,8 @@ npm run build
 1. Open up index.html in the browser using livereload after setting up the project
 2. Register an account using "@stud.noroff.no" as email
 3. copy and past username, email and password in the .env file
-4. go to js/auth/login.js and add a console.log(profile.accesstoken) in the if statement
-```js
-if (response.ok) {
-    const profile = await response.json()
-    // Add it under the fetch statement.
-    console.log(profile.accessToken);
-}
-```
-5. Open up index.html in the browser again, than open up the browser console
-6. login using your profile credentials
-7. check your browser console for generate accesstoken and copy it
-8. past the accesstoken in the .env under USER_TOKEN
+4. find the port you use on your localhost than fill replace the XXXX in this url: "http://localhost:XXXX"
+5. Copy and past that url under the LOCAL_HOST env variable.
  
 
 

@@ -24,7 +24,7 @@ describe("login form", () => {
       expect($input[0].validity.valid).to.eq(false);
     });
 
-    cy.get("#loginEmail").clear().type(Cypress.env("API_EMAIL"));
+    cy.get("#loginEmail").clear().type(Cypress.env("USER_EMAIL"));
 
     cy.get("#loginForm > .modal-footer > [type='submit']").click();
 

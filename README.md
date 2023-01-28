@@ -47,7 +47,7 @@ if (response.ok) {
 5. Open up index.html in the browser again, than open up the browser console
 6. login using your profile credentials
 7. check your browser console for generate accesstoken and copy it
-8. past the accesstoken in the .env under API_TOKEN
+8. past the accesstoken in the .env under USER_TOKEN
  
 
 

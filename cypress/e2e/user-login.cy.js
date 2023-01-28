@@ -13,11 +13,11 @@ describe("login feature", () => {
   it("can login if the user submits valid credentials", () => {
     // Adds and checks login input credentials
     cy.get("#loginEmail")
-      .type(Cypress.env("API_EMAIL"))
-      .should("have.value", Cypress.env("API_EMAIL"), { force: true });
+      .type(Cypress.env("USER_EMAIL"))
+      .should("have.value", Cypress.env("USER_EMAIL"), { force: true });
     cy.get("#loginPassword")
-      .type(Cypress.env("API_PASSWORD"))
-      .should("have.value", Cypress.env("API_PASSWORD"));
+      .type(Cypress.env("USER_PASSWORD"))
+      .should("have.value", Cypress.env("USER_PASSWORD"));
     cy.get("#loginForm > .modal-footer").find("button.btn-success").click();
 
     // Checks that the login credentials are valid

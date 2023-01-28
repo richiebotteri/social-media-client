@@ -5,11 +5,12 @@ dotenv.config();
 
 export default defineConfig({
   e2e: {
+    baseUrl: "http://localhost:5500",
     env: {
-      API_USERNAME: process.env.API_USERNAME,
-      API_EMAIL: process.env.API_EMAIL,
-      API_PASSWORD: process.env.API_PASSWORD,
-      API_TOKEN: process.env.API_TOKEN,
+      USER_NAME: process.env.USER_NAME,
+      USER_EMAIL: process.env.USER_EMAIL,
+      USER_PASSWORD: process.env.USER_PASSWORD,
+      LOCAL_HOST: process.env.LOCAL_HOST,
     },
   },
 });

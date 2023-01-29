@@ -15,9 +15,10 @@ jobs:
 
       - name: Set up NodeJS
         uses: actions/setup-node@v1
+          node-version: 18
 
       - name: Install all dependencies
         run: npm install
 
-      - name: Run Tests
+      - name: Run unit-test
         run: npm run unit-test

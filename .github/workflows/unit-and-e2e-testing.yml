@@ -36,7 +36,7 @@ jobs:
         run: npm run build
       
       - name: Run live-server
-        run: npm run live-server --port=${{ env.LOCAL_HOST_PORT }} &
+        run: npm run live-server --port=3000 &
 
       - name: Replace placeholder in cypress.config.json
         run: |

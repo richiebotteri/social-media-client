@@ -2,7 +2,8 @@
 name: Unit and E2E testing Workflow
 
 on:
-  push
+  - push
+  - workflow_dispatch
 
 env:
   USER_NAME: ${{ secrets.USER_NAME}}

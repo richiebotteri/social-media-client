@@ -1,3 +1,6 @@
+[![Unit and E2E testing Workflow](https://github.com/richiebotteri/social-media-client/actions/workflows/unit-testing.yml/badge.svg?branch=workflow)](https://github.com/richiebotteri/social-media-client/actions/workflows/unit-testing.yml)
+
+
 # Workflow Course Assignment
 
 ## Description

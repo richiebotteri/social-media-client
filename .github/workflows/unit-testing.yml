@@ -1,5 +1,5 @@
 # Setting up unit-testing workflow
-name: Unit Testing Workflow
+name: Unit and E2E testing Workflow
 
 on:
   push
@@ -23,3 +23,9 @@ jobs:
 
       - name: Run unit-test
         run: npm run unit-test
+      
+      - name: Build project
+        run: npm run build
+
+      - name: Run e2e-testing in client
+        run: npm run test-e2e-cli

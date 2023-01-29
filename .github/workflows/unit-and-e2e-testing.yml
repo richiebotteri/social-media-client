@@ -24,6 +24,12 @@ jobs:
         with:
           node-version: 18
 
+      - name: Set up secret file
+        env:
+          DEBUG_PASSWORD: ${{ secrets.USER_CREDENTIALS.USER_PASSWORD }}
+        run: |
+          echo $DEBUG_PASSWORD >> secrets.txt
+
       - name: Install all dependencies
         run: npm install
 

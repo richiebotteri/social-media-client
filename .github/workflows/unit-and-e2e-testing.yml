@@ -40,14 +40,10 @@ jobs:
         env:
           LOCAL_HOST: ${{ env.LOCAL_HOST }}
 
-      - name: Start Cypress and wait for localServer
-        run: |
-          npm start &
-          wait-on ${{ env.LOCAL_HOST}}
-
-      - name: Run e2e-testing in client
+      - name: Run e2e-testing and wait on localServer
         run: 
-          npm run test-e2e-cli 
+          npm run test-e2e-cli &
+          wait-on ${{ env.LOCAL_HOST}}
           --env USER_NAME="${{ env.USER_NAME}}"
           --env USER_EMAIL="${{ env.USER_EMAIL}}"
           --env USER_PASSWORD="${{ env.USER_PASSWORD}}"

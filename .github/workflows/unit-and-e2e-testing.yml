@@ -33,9 +33,12 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Replace placeholder in cypress.config.json
+        run: echo "{\"baseUrl\": \"${{ env.LOCAL_HOST }}\"}" > cypress.config.json
+
       - name: Run e2e-testing in client
         run: 
-          npx cypress run 
+          npm run test-e2e-cli 
           --env USER_NAME="${{ env.USER_NAME}}"
           --env USER_EMAIL="${{ env.USER_EMAIL}}"
           --env USER_PASSWORD="${{ env.USER_PASSWORD}}"

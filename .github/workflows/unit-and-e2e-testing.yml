@@ -24,11 +24,12 @@ jobs:
         with:
           node-version: 18
 
-      - name: Set up secret file
-        env:
-          DEBUG_PASSWORD: ${{ secrets.USER_CREDENTIALS.USER_PASSWORD }}
+       - name: Log environment variables
         run: |
-          echo $DEBUG_PASSWORD >> secrets.txt
+          echo "USER_NAME: ${{ env.USER_NAME}}"
+          echo "USER_EMAIL: ${{ env.USER_EMAIL}}"
+          echo "USER_PASSWORD: ${{ env.USER_PASSWORD}}"
+          echo "LOCAL_HOST: ${{ env.LOCAL_HOST}}"
 
       - name: Install all dependencies
         run: npm install
@@ -38,7 +39,7 @@ jobs:
       
       - name: Build project
         run: npm run build
-
+         
       - name: Replace placeholder in cypress.config.json
         run: |
           echo '{ "baseUrl": "$LOCAL_HOST" }' > cypress.config.json

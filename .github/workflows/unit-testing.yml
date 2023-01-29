@@ -1,0 +1,22 @@
+# Setting up unit-testing workflow
+name: Unit Testing Workflow
+
+on:
+  pull:
+
+jobs:
+  run-unit-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checking in to repo
+      - uses: actions/checkout@v3
+      
+      - name: Setting up node
+      - uses: actions/setup-node@v1
+
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Run unit-test
+        run: npm run unit-test

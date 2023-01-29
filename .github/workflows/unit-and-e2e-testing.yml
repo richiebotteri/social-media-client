@@ -29,10 +29,10 @@ jobs:
 
       - name: Log env variables
         run: |
-          echo "USER_NAME: ${{ secrets.USER_NAME}}"
-          echo "USER_EMAIL: ${{ secrets.USER_EMAIL}}"
-          echo "USER_PASSWORD: ${{ secrets.USER_PASSWORD}}"
-          echo "LOCAL_HOST: ${{ secrets.LOCAL_HOST}}"
+          echo "USER_NAME: ${{ env.USER_NAME}}"
+          echo "USER_EMAIL: ${{ env.USER_EMAIL}}"
+          echo "USER_PASSWORD: ${{ env.USER_PASSWORD}}"
+          echo "LOCAL_HOST: ${{ env.LOCAL_HOST}}"
 
       - name: Run unit-test
         run: npm run unit-test

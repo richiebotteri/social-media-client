@@ -28,13 +28,6 @@ jobs:
       - name: Install all dependencies
         run: npm install
 
-      - name: Log env variables
-        run: |
-          echo "USER_NAME: ${{ env.USER_NAME}}"
-          echo "USER_EMAIL: ${{ env.USER_EMAIL}}"
-          echo "USER_PASSWORD: ${{ env.USER_PASSWORD}}"
-          echo "LOCAL_HOST: ${{ env.LOCAL_HOST}}"
-
       - name: Run unit-test
         run: npm run unit-test
       
@@ -46,6 +39,11 @@ jobs:
           echo '{ "baseUrl": "$LOCAL_HOST" }' > cypress.config.json
         env:
           LOCAL_HOST: ${{ env.LOCAL_HOST }}
+
+      - name: Start Cypress and wait for localServer
+        run: |
+          npm start &
+          wait-on ${{ env.LOCAL_HOST}}
 
       - name: Run e2e-testing in client
         run: 

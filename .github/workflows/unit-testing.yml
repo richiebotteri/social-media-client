@@ -2,7 +2,7 @@
 name: Unit Testing Workflow
 
 on:
-  pull:
+  push
 
 jobs:
   run-unit-test:

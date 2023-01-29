@@ -1,0 +1,14 @@
+# Setting up auto e2e-testing workflow
+name: E2E Testing Workflow
+
+on:
+  unit-testing.yml
+
+jobs:
+  run-e2e-testing:
+    run-unit-tests:
+      name: Run Unit Tests
+      runs-on: ubuntu-latest
+
+      name: Run E2E testing on client
+      run: npm run test-e2e-cli

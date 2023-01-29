@@ -2,7 +2,7 @@
 name: Unit and E2E testing Workflow
 
 on:
-  - push
+  - pull_request
   - workflow_dispatch
 
 env:

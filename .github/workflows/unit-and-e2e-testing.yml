@@ -24,16 +24,16 @@ jobs:
         with:
           node-version: 18
 
-       - name: Log environment variables
+      - name: Install all dependencies
+        run: npm install
+
+      - name: Log env variables
         run: |
           echo "USER_NAME: ${{ env.USER_NAME}}"
           echo "USER_EMAIL: ${{ env.USER_EMAIL}}"
           echo "USER_PASSWORD: ${{ env.USER_PASSWORD}}"
           echo "LOCAL_HOST: ${{ env.LOCAL_HOST}}"
-
-      - name: Install all dependencies
-        run: npm install
-
+          
       - name: Run unit-test
         run: npm run unit-test
       

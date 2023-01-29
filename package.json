@@ -11,6 +11,7 @@
     "test-e2e-cli": "cypress run",
     "build": "sass src/scss:dist/css",
     "start": "sass --watch src/scss:dist/css & live-server",
+    "live-server": "live-server --port=3000",
     "format": "prettier -w src/**/*.{js,scss}",
     "lint": "eslint src/**/*.js",
     "prepare": "husky install"

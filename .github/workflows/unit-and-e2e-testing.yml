@@ -10,6 +10,7 @@ env:
   USER_EMAIL: ${{ secrets.USER_EMAIL}}
   USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
   LOCAL_HOST: ${{ secrets.LOCAL_HOST }}
+  LOCAL_HOST_PORT: ${{ secrets.LOCAL_HOST_PORT }}
 
 jobs:
   run-unit-and-e2e:
@@ -35,7 +36,7 @@ jobs:
         run: npm run build
       
       - name: Run live-server
-        run: npm run live-server --port=${{ env.LOCAL_HOST }} &
+        run: npm run live-server --port=${{ env.LOCAL_HOST_PORT }} &
 
       - name: Replace placeholder in cypress.config.json
         run: |

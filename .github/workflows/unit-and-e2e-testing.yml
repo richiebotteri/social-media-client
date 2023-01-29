@@ -35,7 +35,7 @@ jobs:
         run: npm run build
       
       - name: Run live-server
-        run: live-server --port=3000
+        run: npm live-server --port=3000
 
       - name: Replace placeholder in cypress.config.json
         run: |

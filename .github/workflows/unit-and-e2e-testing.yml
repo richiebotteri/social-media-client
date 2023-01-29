@@ -42,8 +42,7 @@ jobs:
 
       - name: Run e2e-testing and wait on localServer
         run: 
-          npm run test-e2e-cli &
-          wait-on ${{ env.LOCAL_HOST}}
+          npm run test-e2e-cli 
           --env USER_NAME="${{ env.USER_NAME}}"
           --env USER_EMAIL="${{ env.USER_EMAIL}}"
           --env USER_PASSWORD="${{ env.USER_PASSWORD}}"

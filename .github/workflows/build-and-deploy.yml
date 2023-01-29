@@ -8,6 +8,9 @@ on:
     branches: 
       - $default-branch
 
+env:
+  ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN}}
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,6 +30,6 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@releases/v4
       env:
-        ACCESS_TOKEN: ${{ secrets.REPO_SECRET }}
+        ACCESS_TOKEN: ${{ env.ACCESS_TOKEN }}
         BRANCH: gh-pages
         FOLDER: build

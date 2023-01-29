@@ -1,0 +1,25 @@
+name: Build the application
+
+on:
+  # Runs when pull request gets closed on merge
+  pull_request:
+    types:
+      - closed
+    branches: 
+      - $default-branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install node
+    - uses: actions/setup-node@v1
+
+    - name: Build code
+      run: |
+        npm install
+        npm run build

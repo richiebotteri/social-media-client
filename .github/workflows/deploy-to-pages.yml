@@ -2,11 +2,10 @@ name: Deploy to GitHub Pages
 
 on:
   # Runs when pull request gets closed on merge
-  pull_request:
+  workflow_run: 
+    workflows: [Build the application]
     types:
-      - closed
-    branches: 
-      - $default-branch
+      - completed
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:

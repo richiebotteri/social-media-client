@@ -19,7 +19,7 @@ describe("login form", () => {
     // Catches that validation message gets shown when email is types wrong.
     cy.get("#loginEmail").then(($input) => {
       expect($input[0].validationMessage).to.eq(
-        "Sørg for samsvar med det forespurte formatet."
+        "Please match the requested format."
       );
       expect($input[0].validity.valid).to.eq(false);
     });

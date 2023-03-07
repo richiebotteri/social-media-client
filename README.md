@@ -1,18 +1,35 @@
-[![Unit and E2E testing Workflow](https://github.com/richiebotteri/social-media-client/actions/workflows/unit-testing.yml/badge.svg?branch=workflow)](https://github.com/richiebotteri/social-media-client/actions/workflows/unit-testing.yml)
+# Workflow - Course Assignment
 
+## Goal
 
-# Workflow Course Assignment
+Using the skills and knowledge from this course, improve the quality of a package by establishing helpful workflows that make the development process more efficient.
 
-## Description
+## Brief
 
-The goal with this Workflow CA is to improve the quality of an existing environment by establishing useful workflows that make the development process more efficient.
+In this exercise we where tasked with improving the quality of an existing application by providing various development workflows as well as a testing strategy.
 
-I have acted as a QA engineer for another project called Social-Media-Client, providing project configuration, workflow tooling and tests.
+### The following workflows/hooks was required:
 
-## Built With
--  HTML
--  SASS
--  JS
+1. Project is configured to run Prettier on commit
+2. Project is configured to run ESLint on commit
+3. Project default branch is protected, code is versioned and branching conventions have been followed.
+
+### The following project file changes was required:
+
+1. Project readme file is updated to include new configuration information and workflow status badges
+2. Deployed project has been checked for 404 errors
+3. Any bugs found have been communicated in the Issues tab
+
+### The following features must have been automatically tested with Unit tests:
+
+1. The login function fetches and stores a token in browser storage
+2. The logout function clears the token from browser storage
+
+### The following features must have been automatically tested with End-to-End tests:
+
+1. The user can log in and access their profile
+2. The user cannot submit the login form with invalid credentials and is shown a message
+3. The user can log out with the logout button
 
 ## Setting Up The Project
 
@@ -41,8 +58,3 @@ npm run build
 3. copy and past username, email and password in the .env file
 4. find the port you use on your localhost than fill replace the XXXX in this url: "http://localhost:XXXX"
 5. Copy and past that url under the LOCAL_HOST env variable.
- 
-
-
-
-

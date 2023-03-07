@@ -8,24 +8,24 @@ Using the skills and knowledge from this course, improve the quality of a packag
 
 In this exercise we where tasked with improving the quality of an existing application by providing various development workflows as well as a testing strategy.
 
-### The following workflows/hooks was required:
+The following workflows/hooks was required:
 
 1. Project is configured to run Prettier on commit
 2. Project is configured to run ESLint on commit
 3. Project default branch is protected, code is versioned and branching conventions have been followed.
 
-### The following project file changes was required:
+The following project file changes was required:
 
 1. Project readme file is updated to include new configuration information and workflow status badges
 2. Deployed project has been checked for 404 errors
 3. Any bugs found have been communicated in the Issues tab
 
-### The following features must have been automatically tested with Unit tests:
+The following features must have been automatically tested with Unit tests:
 
 1. The login function fetches and stores a token in browser storage
 2. The logout function clears the token from browser storage
 
-### The following features must have been automatically tested with End-to-End tests:
+The following features must have been automatically tested with End-to-End tests:
 
 1. The user can log in and access their profile
 2. The user cannot submit the login form with invalid credentials and is shown a message
